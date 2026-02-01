@@ -70,6 +70,7 @@ O frontend estará rodando em `http://localhost:3000`
 ### Backend
 - `npm start` - Inicia o servidor em modo produção
 - `npm run dev` - Inicia o servidor em modo desenvolvimento com nodemon
+- `node backend/seed.js` - Popula o banco de dados com dados iniciais (veja [SEED.md](backend/SEED.md) para mais detalhes)
 
 ### Frontend
 - `npm run dev` - Inicia o servidor de desenvolvimento
