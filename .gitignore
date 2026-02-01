@@ -52,7 +52,6 @@ music-player/backend/uploads/*
 
 # PM2
 .pm2/
-ecosystem.config.js
 
 # Lock files (opcional - descomente se não quiser commitar)
 # package-lock.json
