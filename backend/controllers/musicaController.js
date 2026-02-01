@@ -1,6 +1,8 @@
 const Musica = require('../models/Musica');
+const Categoria = require('../models/Categoria');
 const path = require('path');
 const { exec } = require('child_process');
+const mongoose = require('mongoose');
 
 // Função para validar e limpar URL do YouTube
 function validarUrlYoutube(url) {
@@ -28,12 +30,38 @@ function validarUrlYoutube(url) {
 
 exports.criarMusica = async (req, res) => {
   try {
+    console.log('=== Iniciando criação de música ===');
+    console.log('req.body:', req.body);
+    console.log('req.file:', req.file);
+    
     const { titulo, categoria } = req.body;
     
     // Validação básica
-    if (!titulo || !categoria) {
+    if (!titulo || !titulo.trim()) {
+      console.log('Erro: Título não fornecido');
       return res.status(400).json({ 
-        error: 'Título e categoria são obrigatórios' 
+        error: 'Título é obrigatório' 
+      });
+    }
+
+    if (!categoria) {
+      return res.status(400).json({ 
+        error: 'Categoria é obrigatória' 
+      });
+    }
+
+    // Validar se categoria é um ObjectId válido
+    if (!mongoose.Types.ObjectId.isValid(categoria)) {
+      return res.status(400).json({ 
+        error: 'ID de categoria inválido' 
+      });
+    }
+
+    // Verificar se a categoria existe
+    const categoriaExiste = await Categoria.findById(categoria);
+    if (!categoriaExiste) {
+      return res.status(404).json({ 
+        error: 'Categoria não encontrada' 
       });
     }
 
@@ -49,14 +77,42 @@ exports.criarMusica = async (req, res) => {
     const fileName = path.basename(filePath);
     const caminho = `uploads/${fileName}`;
     
-    const nova = new Musica({ titulo, categoria, caminho });
+    const nova = new Musica({ 
+      titulo: titulo.trim(), 
+      categoria, 
+      caminho 
+    });
+    
     await nova.save();
+    
+    // Popular a categoria antes de retornar
+    await nova.populate('categoria');
+    
     res.status(201).json(nova);
   } catch (error) {
     console.error('Erro ao criar música:', error);
+    console.error('Stack trace:', error.stack);
+    
+    // Tratar erros específicos do Mongoose
+    if (error.name === 'ValidationError') {
+      const errors = Object.values(error.errors).map(e => e.message);
+      return res.status(400).json({ 
+        error: 'Erro de validação',
+        details: errors.join(', ')
+      });
+    }
+    
+    if (error.name === 'CastError') {
+      return res.status(400).json({ 
+        error: 'ID inválido',
+        details: error.message 
+      });
+    }
+    
     res.status(500).json({ 
       error: 'Erro ao criar música',
-      details: error.message 
+      details: error.message,
+      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
     });
   }
 };
