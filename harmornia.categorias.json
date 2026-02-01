@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "67eae2be65431a58fa60dea2"
+  },
+  "titulo": "Entrada",
+  "dataCriacao": {
+    "$date": "2025-03-31T18:45:18.757Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67eae2cd65431a58fa60dea4"
+  },
+  "titulo": "Bolsa de Proposta ",
+  "dataCriacao": {
+    "$date": "2025-03-31T18:45:33.853Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67eae2db65431a58fa60dea6"
+  },
+  "titulo": "Tronco de Solidariedade",
+  "dataCriacao": {
+    "$date": "2025-03-31T18:45:47.661Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67eaf4f44a0813f3fea3f57a"
+  },
+  "titulo": "Saída",
+  "dataCriacao": {
+    "$date": "2025-03-31T20:03:00.187Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67eaf7754a0813f3fea3f5b3"
+  },
+  "titulo": "Transição",
+  "dataCriacao": {
+    "$date": "2025-03-31T20:13:41.498Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed61985d47309a7cbedbbc"
+  },
+  "titulo": "Meditação ",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:11:04.955Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed68ce5d47309a7cbedcd5"
+  },
+  "titulo": "Viagens",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:41:50.842Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed6bb35d47309a7cbedd13"
+  },
+  "titulo": "Abertura",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:54:11.661Z"
+  },
+  "__v": 0
+}]

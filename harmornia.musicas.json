@@ -1,0 +1,504 @@
+[{
+  "_id": {
+    "$oid": "67eae5ee65431a58fa60dee0"
+  },
+  "titulo": "Gladiator soundtrack | Gladiator theme | Now we are free | Indigo Choir (HQ Live)",
+  "categoria": {
+    "$oid": "67eae2be65431a58fa60dea2"
+  },
+  "caminho": "uploads/1743447534025.mp3",
+  "dataCriacao": {
+    "$date": "2025-03-31T18:58:54.056Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67eaf5134a0813f3fea3f582"
+  },
+  "titulo": "Gladiator - Now We Are Free Super Theme Song",
+  "categoria": {
+    "$oid": "67eaf4f44a0813f3fea3f57a"
+  },
+  "caminho": "uploads/1743451411337.mp3",
+  "dataCriacao": {
+    "$date": "2025-03-31T20:03:31.370Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67eaf5624a0813f3fea3f585"
+  },
+  "titulo": "Acácia Amarela",
+  "categoria": {
+    "$oid": "67eae2db65431a58fa60dea6"
+  },
+  "caminho": "uploads/1743451490266.mp3",
+  "dataCriacao": {
+    "$date": "2025-03-31T20:04:50.271Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67eaf5aa4a0813f3fea3f587"
+  },
+  "titulo": "a-ha - Crying in the Rain (Official Video)",
+  "categoria": {
+    "$oid": "67eaf4f44a0813f3fea3f57a"
+  },
+  "caminho": "uploads/1743451562461.mp3",
+  "dataCriacao": {
+    "$date": "2025-03-31T20:06:02.471Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67eaf6164a0813f3fea3f589"
+  },
+  "titulo": "Ave Maria - Bach/Gounod - Arpa e Violino",
+  "categoria": {
+    "$oid": "67eae2cd65431a58fa60dea4"
+  },
+  "caminho": "uploads/1743451670838.mp3",
+  "dataCriacao": {
+    "$date": "2025-03-31T20:07:50.844Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67eaf73d4a0813f3fea3f59d"
+  },
+  "titulo": "Título : NOVEMBER RAIN (Guns N' Roses) 💿 en VIOLIN ELECTRICO!! (Con SOLOS)",
+  "categoria": {
+    "$oid": "67eae2be65431a58fa60dea2"
+  },
+  "caminho": "uploads/1743451965439.mp3",
+  "dataCriacao": {
+    "$date": "2025-03-31T20:12:45.449Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67eaf7df4a0813f3fea3f5cd"
+  },
+  "titulo": " Queen - We Are The Champions (Instrumental)",
+  "categoria": {
+    "$oid": "67eaf4f44a0813f3fea3f57a"
+  },
+  "caminho": "uploads/1743452127550.mp3",
+  "dataCriacao": {
+    "$date": "2025-03-31T20:15:27.554Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67eaf8604a0813f3fea3f5f9"
+  },
+  "titulo": "Not The King. 👑 - Ice Tea",
+  "categoria": {
+    "$oid": "67eaf7754a0813f3fea3f5b3"
+  },
+  "caminho": "uploads/1743452256534.mp3",
+  "dataCriacao": {
+    "$date": "2025-03-31T20:17:36.538Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67eaf8bb4a0813f3fea3f5fb"
+  },
+  "titulo": "LAKEY INSPIRED - The Process",
+  "categoria": {
+    "$oid": "67eaf7754a0813f3fea3f5b3"
+  },
+  "caminho": "uploads/1743452347446.mp3",
+  "dataCriacao": {
+    "$date": "2025-03-31T20:19:07.473Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed566dc33b03b06aa24f2c"
+  },
+  "titulo": "Angels and Demons Soundtrack - Main Theme (Hans Zimmer)",
+  "categoria": {
+    "$oid": "67eae2cd65431a58fa60dea4"
+  },
+  "caminho": "uploads/musica_1743607385537.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:23:25.115Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed579893644d6e0e99e08c"
+  },
+  "titulo": "The Winner Takes It All - Andre' Rieu (ABBA)",
+  "categoria": {
+    "$oid": "67eae2cd65431a58fa60dea4"
+  },
+  "caminho": "uploads/musica_1743607697094.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:28:24.035Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed584093644d6e0e99e091"
+  },
+  "titulo": "Eagles - Hotel California (Original Instrumental)",
+  "categoria": {
+    "$oid": "67eaf4f44a0813f3fea3f57a"
+  },
+  "caminho": "uploads/musica_1743607864011.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:31:12.260Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed5a635d47309a7cbedad5"
+  },
+  "titulo": "Tocando em frente - Almir Sater - Instrumental Violão",
+  "categoria": {
+    "$oid": "67eae2db65431a58fa60dea6"
+  },
+  "caminho": "uploads/musica_1743608414441.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:40:19.933Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed5aaa5d47309a7cbedad7"
+  },
+  "titulo": "The Last of the Mohicans TURNS METAL",
+  "categoria": {
+    "$oid": "67eae2be65431a58fa60dea2"
+  },
+  "caminho": "uploads/musica_1743608483772.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:41:30.412Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed5af65d47309a7cbedad9"
+  },
+  "titulo": "Epic Dramatic Violin Music - Lethe",
+  "categoria": {
+    "$oid": "67eaf7754a0813f3fea3f5b3"
+  },
+  "caminho": "uploads/musica_1743608559719.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:42:46.925Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed5b0d5d47309a7cbedadb"
+  },
+  "titulo": "Epic Dramatic Violin Music - Lethe",
+  "categoria": {
+    "$oid": "67eae2db65431a58fa60dea6"
+  },
+  "caminho": "uploads/musica_1743608581499.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:43:09.122Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed5b635d47309a7cbedadd"
+  },
+  "titulo": "Interstellar | Tutorial Violin | Play Along 🎻",
+  "categoria": {
+    "$oid": "67eaf7754a0813f3fea3f5b3"
+  },
+  "caminho": "uploads/musica_1743608666990.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:44:35.749Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed5c825d47309a7cbedb13"
+  },
+  "titulo": "Naruto - Sadness and Sorrow (Violin Cover) - Taylor Davis",
+  "categoria": {
+    "$oid": "67eae2cd65431a58fa60dea4"
+  },
+  "caminho": "uploads/musica_1743608956148.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:49:22.587Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed5cd15d47309a7cbedb15"
+  },
+  "titulo": "Coffin Dance on Violin - Karolina Protsenko",
+  "categoria": {
+    "$oid": "67eaf4f44a0813f3fea3f57a"
+  },
+  "caminho": "uploads/musica_1743609035260.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:50:41.988Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed5d8c5d47309a7cbedb46"
+  },
+  "titulo": "The Phantom Of The Opera: Overture",
+  "categoria": {
+    "$oid": "67eae2db65431a58fa60dea6"
+  },
+  "caminho": "uploads/musica_1743609222826.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:53:48.836Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed5dfb5d47309a7cbedb48"
+  },
+  "titulo": "With Or Without You",
+  "categoria": {
+    "$oid": "67eae2be65431a58fa60dea2"
+  },
+  "caminho": "uploads/musica_1743609332907.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:55:39.689Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed5e475d47309a7cbedb4a"
+  },
+  "titulo": "Return to Innocence",
+  "categoria": {
+    "$oid": "67eae2be65431a58fa60dea2"
+  },
+  "caminho": "uploads/musica_1743609408580.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:56:55.363Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed5e715d47309a7cbedb4c"
+  },
+  "titulo": "Música impactante para formaturas, apresentações, espetáculos 1",
+  "categoria": {
+    "$oid": "67eae2be65431a58fa60dea2"
+  },
+  "caminho": "uploads/musica_1743609451570.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T15:57:37.391Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed5f095d47309a7cbedb5d"
+  },
+  "titulo": "Adiemus Enya",
+  "categoria": {
+    "$oid": "67eae2be65431a58fa60dea2"
+  },
+  "caminho": "uploads/musica_1743609604774.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:00:09.747Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed612e5d47309a7cbedbb8"
+  },
+  "titulo": "Tchaikovsky Overture 1812 The Final ending V for Vendetta",
+  "categoria": {
+    "$oid": "67eae2be65431a58fa60dea2"
+  },
+  "caminho": "uploads/musica_1743610153299.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:09:18.874Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed62265d47309a7cbedbc4"
+  },
+  "titulo": "30 MINUTOS DE FUNDO MUSICAL ÉPICO SEM DIREITOS AUTORAIS",
+  "categoria": {
+    "$oid": "67ed61985d47309a7cbedbbc"
+  },
+  "caminho": "uploads/musica_1743610380518.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:13:26.928Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed62a25d47309a7cbedbd5"
+  },
+  "titulo": "Top Melhor Fundo Musical",
+  "categoria": {
+    "$oid": "67ed61985d47309a7cbedbbc"
+  },
+  "caminho": "uploads/musica_1743610515120.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:15:30.046Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed673f5d47309a7cbedc72"
+  },
+  "titulo": "FUNDO MUSICAL PODEROSO | ANJOS COM ESPADA SEM DIREITOS AUTORAIS",
+  "categoria": {
+    "$oid": "67eaf7754a0813f3fea3f5b3"
+  },
+  "caminho": "uploads/musica_1743611699915.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:35:11.675Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed68b35d47309a7cbedcd1"
+  },
+  "titulo": "CALMARIA MUSICAL FUND WITHOUT COPYRIGHT | FUNDO MUSICAL CALMARIA SEM DIREITOS AUTORAIS",
+  "categoria": {
+    "$oid": "67ed61985d47309a7cbedbbc"
+  },
+  "caminho": "uploads/musica_1743612052291.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:41:23.402Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed691f5d47309a7cbedcdd"
+  },
+  "titulo": "Viagem Intensa",
+  "categoria": {
+    "$oid": "67ed68ce5d47309a7cbedcd5"
+  },
+  "caminho": "uploads/musica_1743612137380.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:43:11.733Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed695a5d47309a7cbedcdf"
+  },
+  "titulo": "The Sound of Mental Resilience | High-Octane Vibes for Focus - Violin Rock Instrumental",
+  "categoria": {
+    "$oid": "67eae2db65431a58fa60dea6"
+  },
+  "caminho": "uploads/musica_1743612241075.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:44:10.060Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed69bc5d47309a7cbedce1"
+  },
+  "titulo": "HapterMusic - Destiny | Instrumental | Orchestral | Copyright Free | Royalty Free",
+  "categoria": {
+    "$oid": "67eae2cd65431a58fa60dea4"
+  },
+  "caminho": "uploads/musica_1743612337556.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:45:48.023Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed6a195d47309a7cbedce3"
+  },
+  "titulo": "Gibran Alcocer's Best Ambient Playlist Vol.1✨",
+  "categoria": {
+    "$oid": "67ed61985d47309a7cbedbbc"
+  },
+  "caminho": "uploads/musica_1743612412344.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:47:21.989Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed6ae55d47309a7cbedd0f"
+  },
+  "titulo": "Now We Are Free / Honor Him",
+  "categoria": {
+    "$oid": "67eae2cd65431a58fa60dea4"
+  },
+  "caminho": "uploads/musica_1743612634324.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:50:45.124Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed6bd35d47309a7cbedd1b"
+  },
+  "titulo": "EPIC Game of Thrones (Extended Theme) Audio - PiscesRising",
+  "categoria": {
+    "$oid": "67ed6bb35d47309a7cbedd13"
+  },
+  "caminho": "uploads/musica_1743612871947.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:54:43.946Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ed6c855d47309a7cbedd1d"
+  },
+  "titulo": "Higher Calling (1111 Hz) | 1 hour handpan music ",
+  "categoria": {
+    "$oid": "67ed61985d47309a7cbedbbc"
+  },
+  "caminho": "uploads/musica_1743612960165.mp3",
+  "dataCriacao": {
+    "$date": "2025-04-02T16:57:41.788Z"
+  },
+  "__v": 0
+}]

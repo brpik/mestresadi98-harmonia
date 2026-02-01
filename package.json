@@ -1,0 +1,21 @@
+{
+  "name": "music-player-monorepo",
+  "version": "1.0.0",
+  "description": "Monorepo para o player de música com frontend e backend",
+  "scripts": {
+    "install:all": "cd frontend && npm install && cd ../backend && npm install",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop ecosystem.config.js",
+    "pm2:restart": "pm2 restart ecosystem.config.js",
+    "pm2:delete": "pm2 delete ecosystem.config.js",
+    "pm2:logs": "pm2 logs",
+    "pm2:status": "pm2 status",
+    "start": "npm run pm2:start"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1"
+  }
+}
