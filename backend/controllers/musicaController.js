@@ -27,35 +27,95 @@ function validarUrlYoutube(url) {
 }
 
 exports.criarMusica = async (req, res) => {
-  const { titulo, categoria } = req.body;
-  const caminho = req.file.path;
-  const nova = new Musica({ titulo, categoria, caminho });
-  await nova.save();
-  res.status(201).json(nova);
+  try {
+    const { titulo, categoria } = req.body;
+    
+    // Validação básica
+    if (!titulo || !categoria) {
+      return res.status(400).json({ 
+        error: 'Título e categoria são obrigatórios' 
+      });
+    }
+
+    if (!req.file) {
+      return res.status(400).json({ 
+        error: 'Arquivo de áudio é obrigatório' 
+      });
+    }
+
+    const caminho = req.file.path;
+    const nova = new Musica({ titulo, categoria, caminho });
+    await nova.save();
+    res.status(201).json(nova);
+  } catch (error) {
+    console.error('Erro ao criar música:', error);
+    res.status(500).json({ 
+      error: 'Erro ao criar música',
+      details: error.message 
+    });
+  }
 };
 
 exports.listarMusicas = async (req, res) => {
-  const musicas = await Musica.find().populate('categoria');
-  res.json(musicas);
+  try {
+    const musicas = await Musica.find().populate('categoria');
+    res.json(musicas);
+  } catch (error) {
+    console.error('Erro ao listar músicas:', error);
+    res.status(500).json({ 
+      error: 'Erro ao listar músicas',
+      details: error.message 
+    });
+  }
 };
 
 exports.listarPorCategoria = async (req, res) => {
-  const { id } = req.params;
-  const musicas = await Musica.find({ categoria: id });
-  res.json(musicas);
+  try {
+    const { id } = req.params;
+    const musicas = await Musica.find({ categoria: id });
+    res.json(musicas);
+  } catch (error) {
+    console.error('Erro ao listar músicas por categoria:', error);
+    res.status(500).json({ 
+      error: 'Erro ao listar músicas por categoria',
+      details: error.message 
+    });
+  }
 };
 
 exports.atualizarMusica = async (req, res) => {
-  const { id } = req.params;
-  const { titulo, categoria } = req.body;
-  const atualizada = await Musica.findByIdAndUpdate(id, { titulo, categoria }, { new: true });
-  res.json(atualizada);
+  try {
+    const { id } = req.params;
+    const { titulo, categoria } = req.body;
+    const atualizada = await Musica.findByIdAndUpdate(id, { titulo, categoria }, { new: true });
+    if (!atualizada) {
+      return res.status(404).json({ error: 'Música não encontrada' });
+    }
+    res.json(atualizada);
+  } catch (error) {
+    console.error('Erro ao atualizar música:', error);
+    res.status(500).json({ 
+      error: 'Erro ao atualizar música',
+      details: error.message 
+    });
+  }
 };
 
 exports.deletarMusica = async (req, res) => {
-  const { id } = req.params;
-  await Musica.findByIdAndDelete(id);
-  res.sendStatus(204);
+  try {
+    const { id } = req.params;
+    const deletada = await Musica.findByIdAndDelete(id);
+    if (!deletada) {
+      return res.status(404).json({ error: 'Música não encontrada' });
+    }
+    res.sendStatus(204);
+  } catch (error) {
+    console.error('Erro ao deletar música:', error);
+    res.status(500).json({ 
+      error: 'Erro ao deletar música',
+      details: error.message 
+    });
+  }
 };
 
 exports.baixarYoutube = async (req, res) => {

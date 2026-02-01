@@ -236,15 +236,16 @@ export default function MusicasPage() {
       })
     } catch (error: any) {
       console.error("Erro ao criar música:", error)
+      const errorMessage = error.response?.data?.error || error.response?.data?.details || error.message || "Erro desconhecido ao criar música"
 
       setAddStatus({
         status: "error",
-        message: error.response?.data?.message || "Não foi possível adicionar a música.",
+        message: errorMessage,
       })
 
       toast({
         title: "Erro",
-        description: "Não foi possível adicionar a música.",
+        description: errorMessage,
         variant: "destructive",
       })
     } finally {
