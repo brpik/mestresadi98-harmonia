@@ -43,7 +43,15 @@ exports.criarMusica = async (req, res) => {
       });
     }
 
-    const caminho = req.file.path;
+    // Normalizar o caminho do arquivo para usar caminho relativo
+    const filePath = req.file.path;
+    // Garantir que o caminho seja relativo (uploads/filename.ext)
+    const caminho = filePath.includes('uploads/') 
+      ? filePath.split('uploads/')[1] 
+        ? `uploads/${filePath.split('uploads/')[1]}`
+        : filePath.replace(/^.*[\\\/]/, 'uploads/')
+      : `uploads/${path.basename(filePath)}`;
+    
     const nova = new Musica({ titulo, categoria, caminho });
     await nova.save();
     res.status(201).json(nova);
