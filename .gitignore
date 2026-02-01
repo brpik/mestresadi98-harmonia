@@ -40,10 +40,9 @@ Thumbs.db
 *~
 
 # Uploads (mantém a estrutura mas não os arquivos)
-backend/uploads/*
-!backend/uploads/.gitkeep
-music-player/backend/uploads/*
-!music-player/backend/uploads/.gitkeep
+# backend/uploads/* - Removido para incluir as músicas
+# music-player/backend/uploads/*
+# !music-player/backend/uploads/.gitkeep
 
 # Temporary files
 *.tmp
