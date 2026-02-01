@@ -196,9 +196,21 @@ exports.baixarYoutube = async (req, res) => {
     const outputFile = `musica_${timestamp}.mp3`;
     const fullPath = path.join(outputDir, outputFile);
 
-    const comando = `yt-dlp -x --audio-format mp3 -o "${outputDir}/musica_${timestamp}.%(ext)s" "${urlLimpa}"`;
+    // Encontrar o caminho completo do yt-dlp
+    const { execSync } = require('child_process');
+    let ytDlpPath = 'yt-dlp';
+    try {
+      ytDlpPath = execSync('which yt-dlp', { encoding: 'utf-8' }).trim();
+    } catch (e) {
+      // Se não encontrar, tenta usar o caminho padrão do Homebrew
+      ytDlpPath = '/opt/homebrew/bin/yt-dlp';
+    }
 
-    exec(comando, async (err, stdout, stderr) => {
+    const comando = `"${ytDlpPath}" -x --audio-format mp3 -o "${outputDir}/musica_${timestamp}.%(ext)s" "${urlLimpa}"`;
+
+    exec(comando, { 
+      env: { ...process.env, PATH: process.env.PATH || '/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin' }
+    }, async (err, stdout, stderr) => {
       if (err) {
         console.error('Erro ao baixar:', stderr);
         return res.status(500).json({ error: 'Erro ao baixar áudio do YouTube' });
