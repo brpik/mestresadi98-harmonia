@@ -206,10 +206,17 @@ exports.baixarYoutube = async (req, res) => {
       ytDlpPath = '/opt/homebrew/bin/yt-dlp';
     }
 
+    // Garantir que o PATH inclui o diretório do Homebrew para encontrar ffmpeg
+    const homebrewPath = '/opt/homebrew/bin';
+    const currentPath = process.env.PATH || '';
+    const enhancedPath = currentPath.includes(homebrewPath) 
+      ? currentPath 
+      : `${homebrewPath}:${currentPath}`;
+
     const comando = `"${ytDlpPath}" -x --audio-format mp3 -o "${outputDir}/musica_${timestamp}.%(ext)s" "${urlLimpa}"`;
 
     exec(comando, { 
-      env: { ...process.env, PATH: process.env.PATH || '/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin' }
+      env: { ...process.env, PATH: enhancedPath }
     }, async (err, stdout, stderr) => {
       if (err) {
         console.error('Erro ao baixar:', stderr);
