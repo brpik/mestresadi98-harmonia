@@ -63,7 +63,8 @@ O frontend estará rodando em `http://localhost:3000`
 
 - Certifique-se de que o MongoDB está rodando antes de iniciar o backend
 - O diretório `uploads/` no backend é usado para armazenar arquivos de música e logos
-- Para funcionalidade de download do YouTube, é necessário ter `yt-dlp` instalado no sistema
+- Para funcionalidade de download do YouTube, é necessário ter `yt-dlp` e `ffmpeg` instalados no sistema
+- **Para deploy em produção, consulte [DEPLOY.md](DEPLOY.md) para instruções completas**
 
 ## 🛠️ Scripts Disponíveis
 
