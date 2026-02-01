@@ -285,9 +285,16 @@ export function MusicProvider({ children }: { children: ReactNode }) {
   }, [audioRef.current])
 
   // Efeito para atualizar o volume quando ele mudar (mas não durante fade in)
+  // No iOS, este useEffect pode não funcionar devido a restrições de segurança
+  // O volume deve ser aplicado diretamente nos handlers de interação do usuário
   useEffect(() => {
     if (audioRef.current && !isFadingIn) {
-      audioRef.current.volume = volume
+      try {
+        audioRef.current.volume = volume
+      } catch (e) {
+        // No iOS, pode falhar silenciosamente se não for durante uma interação do usuário
+        // Isso é esperado e o volume será aplicado nos handlers de botão
+      }
     }
   }, [volume, isFadingIn])
 

@@ -27,8 +27,16 @@ export default function Player() {
   const seekTimeRef = useRef(0)
 
   useEffect(() => {
+    // No iOS, o volume só pode ser alterado durante uma interação do usuário
+    // Por isso aplicamos diretamente nos handlers de botão
+    // Este useEffect é para sincronização geral, mas pode não funcionar no iOS
     if (audioRef.current) {
-      audioRef.current.volume = volume
+      // Tenta aplicar o volume, mas pode falhar silenciosamente no iOS
+      try {
+        audioRef.current.volume = volume
+      } catch (e) {
+        // Ignora erros no iOS onde o volume não pode ser alterado programaticamente
+      }
     }
   }, [volume, audioRef])
 
@@ -196,17 +204,53 @@ export default function Player() {
   }
 
   const handleVolumeChange = (value: number[]) => {
-    setVolume(value[0])
+    const newVolume = value[0]
+    setVolume(newVolume)
+    // No iOS, precisa aplicar diretamente no elemento de áudio durante a interação do usuário
+    // Usa requestAnimationFrame para garantir que seja aplicado no contexto correto
+    if (audioRef.current) {
+      requestAnimationFrame(() => {
+        if (audioRef.current) {
+          audioRef.current.volume = newVolume
+        }
+      })
+    }
   }
 
-  const handleVolumeIncrease = () => {
+  const handleVolumeIncrease = (e?: React.MouseEvent | React.TouchEvent) => {
+    e?.preventDefault()
+    e?.stopPropagation()
     const newVolume = Math.min(1, volume + 0.1)
     setVolume(newVolume)
+    // No iOS, precisa aplicar diretamente no elemento de áudio durante a interação do usuário
+    if (audioRef.current) {
+      // Aplica imediatamente durante o evento de toque/clique
+      audioRef.current.volume = newVolume
+      // Também tenta no próximo frame para garantir
+      requestAnimationFrame(() => {
+        if (audioRef.current) {
+          audioRef.current.volume = newVolume
+        }
+      })
+    }
   }
 
-  const handleVolumeDecrease = () => {
+  const handleVolumeDecrease = (e?: React.MouseEvent | React.TouchEvent) => {
+    e?.preventDefault()
+    e?.stopPropagation()
     const newVolume = Math.max(0, volume - 0.1)
     setVolume(newVolume)
+    // No iOS, precisa aplicar diretamente no elemento de áudio durante a interação do usuário
+    if (audioRef.current) {
+      // Aplica imediatamente durante o evento de toque/clique
+      audioRef.current.volume = newVolume
+      // Também tenta no próximo frame para garantir
+      requestAnimationFrame(() => {
+        if (audioRef.current) {
+          audioRef.current.volume = newVolume
+        }
+      })
+    }
   }
 
   const handleFadeOut = async () => {
@@ -512,6 +556,8 @@ export default function Player() {
                 variant="outline"
                 size="icon"
                 className="h-12 w-12"
+                onTouchStart={handleVolumeDecrease}
+                onTouchEnd={(e) => e.preventDefault()}
                 onClick={handleVolumeDecrease}
                 disabled={volume <= 0}
               >
@@ -527,6 +573,8 @@ export default function Player() {
                 variant="outline"
                 size="icon"
                 className="h-12 w-12"
+                onTouchStart={handleVolumeIncrease}
+                onTouchEnd={(e) => e.preventDefault()}
                 onClick={handleVolumeIncrease}
                 disabled={volume >= 1}
               >
@@ -539,6 +587,10 @@ export default function Player() {
               max={1}
               step={0.01}
               onValueChange={handleVolumeChange}
+              onTouchStart={(e) => {
+                // Garante que o toque seja capturado no iOS
+                e.stopPropagation()
+              }}
               className="w-full"
             />
             {isPlaying && (
