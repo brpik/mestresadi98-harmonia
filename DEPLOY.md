@@ -6,6 +6,13 @@ Este guia explica como fazer o deploy completo da aplicação Harmonia Sadi em u
 
 Antes de clonar o repositório, você precisa instalar as seguintes dependências do sistema operacional:
 
+> 💡 **Dica**: Você pode usar o script automatizado `install-dependencies.sh` para instalar todas as dependências automaticamente:
+> ```bash
+> bash install-dependencies.sh
+> ```
+
+Ou siga as instruções manuais abaixo:
+
 ### 1. Node.js e npm
 ```bash
 # Ubuntu/Debian
